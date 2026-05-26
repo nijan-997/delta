@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { easeOutSmooth } from "@/lib/motion-ease";
 
 /** Inset between green fill and dashed stroke (reference gap) */
 const STROKE_INSET = 10;
@@ -10,7 +11,7 @@ export function AiPill() {
     <motion.span
       initial={{ rotate: 0, opacity: 0, y: 6 }}
       animate={{ rotate: -3, opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
+      transition={{ duration: 0.5, ease: easeOutSmooth, delay: 0.12 }}
       whileHover={{ scale: 1.05, rotate: -3 }}
       className="relative mx-1 inline-flex align-middle"
     >

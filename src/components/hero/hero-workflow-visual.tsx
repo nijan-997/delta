@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Transition } from "framer-motion";
 import Image from "next/image";
 import { AiAgentBlink } from "@/components/hero/workflow/ai-agent-blink";
 
@@ -13,7 +13,7 @@ const figureBounce = {
   opacity: [0, 1, 1, 1, 1, 1] as number[],
 };
 
-const figureBounceTransition = {
+const figureBounceTransition: Transition = {
   duration: 1.25,
   times: [0, 0.42, 0.58, 0.74, 0.88, 1],
   ease: [
@@ -23,7 +23,7 @@ const figureBounceTransition = {
     [0.55, 0, 0.75, 1],
     [0.55, 0, 0.75, 1],
     [0.33, 0, 0.2, 1],
-  ] as const,
+  ],
   delay: 0.15,
 };
 

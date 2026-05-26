@@ -1,11 +1,11 @@
-export const icpEase = [0.16, 1, 0.3, 1] as const;
+import { easeOutProminent } from "@/lib/motion-ease";
 
 export const icpHeaderVariants = {
   hidden: { opacity: 0, y: 48 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.75, ease: icpEase },
+    transition: { duration: 0.75, ease: easeOutProminent },
   },
 };
 
@@ -22,6 +22,6 @@ export const icpCardVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.72, ease: icpEase },
+    transition: { duration: 0.72, ease: easeOutProminent },
   },
 };

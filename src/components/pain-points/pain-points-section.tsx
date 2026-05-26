@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { SiteContainer } from "@/components/layout/site-container";
+import { easeOutSmooth } from "@/lib/motion-ease";
 import { PainPointCardItem } from "@/components/pain-points/pain-point-card";
 import {
   PAIN_POINT_CARDS,
@@ -21,7 +22,7 @@ const headerVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.55, ease: easeOutSmooth },
   },
 };
 

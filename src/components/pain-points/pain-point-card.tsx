@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import type { PainPointCard } from "@/components/pain-points/pain-points-data";
+import { easeOutSmooth } from "@/lib/motion-ease";
 
 type PainPointCardProps = {
   card: PainPointCard;
@@ -16,7 +17,7 @@ export function PainPointCardItem({ card }: PainPointCardProps) {
         visible: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+          transition: { duration: 0.5, ease: easeOutSmooth },
         },
       }}
       className="flex h-[220px] w-full flex-col rounded-2xl p-5 sm:h-[228px] sm:rounded-[18px] sm:p-6"
