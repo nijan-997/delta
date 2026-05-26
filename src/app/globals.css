@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  /* Design tokens */
+  --background: #fbfbee;
+  --foreground: #11120f;
+  --muted-foreground: #57564f;
+  --primary: #fd3b02;
+  --primary-foreground: #ffffff;
+  --surface: #ffffff;
+  --border: #deded4;
+  --header: #111111;
+  --accent-pill: #cce576;
+  --stroke-pill: #282320;
+  --pain-orange: #feac9e;
+  --pain-green: #cce576;
+  --pain-violet: #c7baf3;
+  --pain-brown: #ffeac7;
+  --radius: 12px;
+  --site-max-width: 1440px;
+  --section-gap: 14rem;
+  --section-gap-tight: 5.5rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-header: var(--header);
+  --color-accent-pill: var(--accent-pill);
+  --color-stroke-pill: var(--stroke-pill);
+  --color-pain-orange: var(--pain-orange);
+  --color-pain-green: var(--pain-green);
+  --color-pain-violet: var(--pain-violet);
+  --color-pain-brown: var(--pain-brown);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: var(--font-geist-sans);
+}
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Hero zone only (header + hero) — full width, responsive dot grid */
+.hero-dotted-canvas {
+  background-color: #fbfbee;
+  background-image: radial-gradient(
+    circle,
+    rgba(40, 35, 32, 0.22) 1.25px,
+    transparent 1.25px
+  );
+  background-size: 12px 12px;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: center top;
+}
+
+@media (min-width: 640px) {
+  .hero-dotted-canvas {
+    background-size: 13px 13px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-dotted-canvas {
+    background-size: 14px 14px;
+  }
+}
