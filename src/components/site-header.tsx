@@ -45,9 +45,7 @@ export function SiteHeader() {
               priority
               draggable={false}
             />
-            <span className="truncate text-lg font-bold tracking-tight text-white md:text-xl">
-              Onyxer
-            </span>
+          
           </div>
 
           <motion.a
