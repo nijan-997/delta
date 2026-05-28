@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import { SiteContainer } from "@/components/layout/site-container";
 import { PrimaryCtaArrow } from "@/components/ui/primary-cta-arrow";
 import { mapScroll } from "@/lib/scroll-ease";
@@ -35,12 +36,15 @@ export function SiteHeader() {
           }}
         >
           <div className="flex min-w-0 items-center gap-2">
-            <div
-              className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-xs font-bold text-white"
-              aria-hidden
-            >
-              Δ
-            </div>
+            <Image
+              src="/logo.svg"
+              alt="Delta"
+              width={132}
+              height={28}
+              className="h-7 w-auto shrink-0"
+              priority
+              draggable={false}
+            />
             <span className="truncate text-lg font-bold tracking-tight text-white md:text-xl">
               Onyxer
             </span>
