@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { icpCardVariants } from "@/components/icp/icp-motion";
-import { PrimaryCtaArrow } from "@/components/ui/primary-cta-arrow";
+import { Pressable3dCta } from "@/components/ui/pressable-3d-cta";
 
 export function IcpCtaCard() {
   return (
@@ -19,13 +19,7 @@ export function IcpCtaCard() {
         </p>
       </div>
 
-      <a
-        href="#join"
-        className="group mt-8 inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 sm:mt-10 sm:px-6 sm:text-[15px]"
-      >
-        Join the Bootcamp
-        <PrimaryCtaArrow />
-      </a>
+      <Pressable3dCta className="mt-8 sm:mt-10" />
     </motion.article>
   );
 }

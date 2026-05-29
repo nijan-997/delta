@@ -2,7 +2,7 @@
 
 :root {
   /* Design tokens */
-  --background: #fbfbee;
+  --background: #fffff7;
   --foreground: #11120f;
   --muted-foreground: #57564f;
   --primary: #fd3b02;
@@ -12,14 +12,19 @@
   --header: #111111;
   --accent-pill: #cce576;
   --stroke-pill: #282320;
-  --pain-orange: #feac9e;
-  --pain-green: #cce576;
-  --pain-violet: #c7baf3;
-  --pain-brown: #ffeac7;
   --radius: 12px;
   --site-max-width: 1440px;
-  --section-gap: 14rem;
-  --section-gap-tight: 5.5rem;
+  /* Sticky header clearance (bar + outer padding) */
+  --site-header-offset: 5.25rem;
+  /* Uniform vertical space between page sections */
+  --section-spacing: 6.5rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --site-header-offset: 5.75rem;
+    --section-spacing: 8rem;
+  }
 }
 
 @theme inline {
@@ -33,11 +38,6 @@
   --color-header: var(--header);
   --color-accent-pill: var(--accent-pill);
   --color-stroke-pill: var(--stroke-pill);
-  --color-pain-orange: var(--pain-orange);
-  --color-pain-green: var(--pain-green);
-  --color-pain-violet: var(--pain-violet);
-  --color-pain-brown: var(--pain-brown);
-
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -60,9 +60,9 @@ body {
   }
 }
 
-/* Hero zone only (header + hero) — full width, responsive dot grid */
+/* Dot grid background (used on absolute backdrop layer) */
 .hero-dotted-canvas {
-  background-color: #fbfbee;
+  background-color: #fffff7;
   background-image: radial-gradient(
     circle,
     rgba(40, 35, 32, 0.22) 1.25px,
@@ -70,8 +70,7 @@ body {
   );
   background-size: 12px 12px;
   background-repeat: repeat;
-  background-attachment: scroll;
-  background-position: center top;
+  background-position: 0 0;
 }
 
 @media (min-width: 640px) {

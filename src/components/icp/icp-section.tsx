@@ -18,7 +18,7 @@ export function IcpSection() {
   return (
     <section
       ref={ref}
-      className="relative z-10 bg-background pb-[var(--section-gap)]"
+      className="relative z-10 bg-background"
       aria-labelledby="icp-heading"
     >
       <SiteContainer>
@@ -32,11 +32,10 @@ export function IcpSection() {
             id="icp-heading"
             className="text-balance text-[2.25rem] font-semibold leading-[1.1] tracking-[-0.02em] text-foreground sm:text-5xl md:text-[3.25rem]"
           >
-            {ICP_HEADING.title}
+            {ICP_HEADING.line1}
+            <br />
+            {ICP_HEADING.line2}
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:mt-6 sm:text-lg">
-            {ICP_HEADING.subtitle}
-          </p>
         </motion.div>
 
         <motion.div
