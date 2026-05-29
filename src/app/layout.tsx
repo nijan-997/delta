@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { SiteShell } from "@/components/site-shell";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -22,7 +23,9 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakartaSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full overflow-x-clip">{children}</body>
+      <body className="min-h-full overflow-x-clip">
+        <SiteShell>{children}</SiteShell>
+      </body>
     </html>
   );
 }

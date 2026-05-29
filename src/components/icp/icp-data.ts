@@ -8,9 +8,8 @@ export type IcpProfile = {
 };
 
 export const ICP_HEADING = {
-  title: "Built for the people who keep the work running.",
-  subtitle:
-    "Whether you run ops at a startup or a 100-person team, Delta Framework is designed for operators who want practical leverage. Not theory.",
+  line1: "Built for People Who See",
+  line2: "a Better Way",
 };
 
 export const ICP_PROFILES: IcpProfile[] = [
