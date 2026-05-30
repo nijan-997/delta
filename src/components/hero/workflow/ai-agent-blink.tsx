@@ -3,13 +3,13 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-/** Eye centers from workflow.svg (viewBox 1204×597) */
+/** Eye centers from workflow.svg (viewBox 1147×464) */
 const EYES = [
-  { left: 41.28, top: 43.83 },
-  { left: 43.11, top: 43.83 },
+  { left: 41.72, top: 51.61 },
+  { left: 42.9, top: 51.61 },
 ] as const;
 
-const EYE_SIZE = { w: 1.05, h: 1.65 };
+const EYE_SIZE = { w: 0.62, h: 1.05 };
 const LID_COLOR = "#C2E25B";
 
 export function AiAgentBlink() {

@@ -2,7 +2,7 @@
 
 :root {
   /* Design tokens */
-  --background: #fffff7;
+  --background: #f8f8f8;
   --foreground: #11120f;
   --muted-foreground: #57564f;
   --primary: #fd3b02;
@@ -62,15 +62,11 @@ body {
 
 /* Dot grid background (used on absolute backdrop layer) */
 .hero-dotted-canvas {
-  background-color: #fffff7;
-  background-image: radial-gradient(
-    circle,
-    rgba(40, 35, 32, 0.22) 1.25px,
-    transparent 1.25px
-  );
-  background-size: 12px 12px;
-  background-repeat: repeat;
   background-position: 0 0;
+  background-color: #F0EDE7;
+  background-image: radial-gradient(circle, #d1cecaeb 1.25px, #0000 1.25px);
+  background-repeat: repeat;
+  background-size: 12px 12px;
 }
 
 @media (min-width: 640px) {

@@ -5,8 +5,10 @@ import Image from "next/image";
 import { AiAgentBlink } from "@/components/hero/workflow/ai-agent-blink";
 
 /** Head overlaps bottom of AI Agent card (~6% into the hub) */
-const FIGURE_TOP = "45.8%";
-const ARTBOARD = { w: 1204, h: 597 };
+const FIGURE_TOP = "38%";
+const WORKFLOW = { w: 1147, h: 464 };
+const ARTBOARD = { w: 1147, h: 970 };
+const WORKFLOW_HEIGHT = `${(WORKFLOW.h / ARTBOARD.h) * 100}%`;
 
 const figureBounce = {
   y: [72, -14, 9, -4, 1, 0] as number[],
@@ -29,25 +31,30 @@ const figureBounceTransition: Transition = {
 
 export function HeroWorkflowVisual() {
   return (
-    <div className="relative mt-6 w-full max-w-full sm:mt-8">
+    <div className="relative mt-12 w-full max-w-[1147px] sm:mt-14 md:mt-16">
       <div
         className="relative mx-auto w-full"
         style={{ aspectRatio: `${ARTBOARD.w} / ${ARTBOARD.h}` }}
       >
-        <Image
-          src="/workflow.svg"
-          alt="AI automation workflow connecting Gmail, Slack, Sheets, Notion, Calendar, and Drive"
-          fill
-          sizes="(max-width: 1440px) 100vw, 1204px"
-          className="absolute inset-0 z-[2] object-contain object-top"
-          priority
-          draggable={false}
-        />
+        <div
+          className="absolute inset-x-0 top-0 z-[3]"
+          style={{ height: WORKFLOW_HEIGHT }}
+        >
+          <Image
+            src="/workflow.svg"
+            alt="AI automation workflow connecting Gmail, Slack, Sheets, Notion, Calendar, and Drive"
+            fill
+            sizes="(max-width: 1440px) 100vw, 1147px"
+            className="absolute inset-0 object-contain object-top"
+            priority
+            draggable={false}
+          />
 
-        <AiAgentBlink />
+          <AiAgentBlink />
+        </div>
 
         <motion.div
-          className="pointer-events-none absolute left-1/2 z-[3] w-[min(92%,720px)] -translate-x-1/2 sm:w-[88%] md:max-w-[720px]"
+          className="pointer-events-none absolute left-1/2 z-[5] w-[80%] max-w-[790px] -translate-x-1/2 sm:w-[74%] md:w-[69%]"
           style={{ top: FIGURE_TOP }}
           initial={{ y: figureBounce.y[0], opacity: 0 }}
           animate={{ y: figureBounce.y, opacity: figureBounce.opacity }}
