@@ -7,25 +7,29 @@ import { HeroWorkflowVisual } from "@/components/hero/hero-workflow-visual";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full pb-8 md:pb-10">
-      <SiteContainer className="relative flex flex-col items-center text-center">
-        <h1 className="max-w-4xl pt-10 text-balance text-[52px] font-semibold leading-[1.08] tracking-[-0.02em] text-foreground sm:pt-12 md:pt-14 md:text-[76px] lg:pt-16">
-          Automate your busywork
-          <br />
-          with <AiPill />
-        </h1>
+    <section className="relative w-full">
+      <SiteContainer>
+        <div className="hero-dotted-canvas relative isolate overflow-hidden rounded-[24px] border border-[#E1DACD] bg-[#F0EDE7] px-4 pt-10 text-center sm:rounded-[28px] sm:px-6 sm:pt-12 md:px-8 md:pt-14 lg:pt-16">
+          <div className="relative z-10 flex flex-col items-center">
+            <h1 className="max-w-4xl text-balance text-[44px] font-semibold leading-[1.08] tracking-[-0.02em] text-foreground sm:text-[52px] md:text-[76px]">
+              Automate your busywork
+              <br />
+              with <AiPill />
+            </h1>
 
-        <p className="mt-8 max-w-2xl text-xl leading-relaxed text-muted-foreground">
-          Learn practical AI automation without the technical overwhelm.
-          <br />
-          Focus on what matters.
-        </p>
+            <p className="mt-7 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
+              Learn practical AI automation without the technical overwhelm.
+              <br />
+              Focus on what matters.
+            </p>
 
-        <div className="mt-8 flex justify-center sm:mt-10">
-          <Pressable3dCta />
+            <div className="mt-7 flex justify-center sm:mt-8">
+              <Pressable3dCta />
+            </div>
+
+            <HeroWorkflowVisual />
+          </div>
         </div>
-
-        <HeroWorkflowVisual />
       </SiteContainer>
     </section>
   );

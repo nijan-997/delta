@@ -42,9 +42,9 @@ export function SiteHeader() {
             <Image
               src="/logo.svg"
               alt="Delta"
-              width={132}
+              width={125}
               height={28}
-              className="h-7 w-auto shrink-0"
+              className="shrink-0"
               priority
               draggable={false}
             />
