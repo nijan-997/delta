@@ -46,13 +46,13 @@ export function FinalCtaSection() {
     <section ref={ref} className="relative z-10 bg-background">
       <SiteContainer>
         <motion.div
-          className="relative isolate mx-auto aspect-[1313/739] min-h-[260px] max-w-[1260px] overflow-hidden rounded-[24px] sm:min-h-[320px] sm:rounded-[28px] lg:min-h-0"
+          className="relative isolate aspect-[4/3] min-h-[310px] w-full overflow-hidden rounded-[22px] sm:aspect-video sm:min-h-[360px] sm:rounded-[28px] md:aspect-[1313/739] md:min-h-[420px] lg:min-h-0"
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={sectionVariants}
         >
           <motion.div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-bottom sm:bg-center"
             style={{ backgroundImage: "url('/final cta bg.png')" }}
             variants={backgroundVariants}
             aria-hidden
@@ -62,9 +62,9 @@ export function FinalCtaSection() {
             aria-hidden
           />
 
-          <div className="relative z-10 flex h-full flex-col items-center px-5 pt-12 text-center sm:pt-16 md:pt-20 lg:pt-24">
+          <div className="relative z-10 flex h-full flex-col items-center px-5 pt-12 text-center sm:pt-16 md:pt-20 lg:pt-24 xl:pt-28">
             <motion.h2
-              className="max-w-2xl text-balance text-[1.7rem] font-semibold leading-[1.12] tracking-normal text-white sm:text-4xl md:text-[2.75rem]"
+              className="max-w-[22rem] text-balance text-[1.35rem] font-semibold leading-[1.12] tracking-normal text-white sm:max-w-2xl sm:text-4xl md:text-[2.75rem]"
               variants={contentVariants}
             >
               Gather Around The Campfire.
@@ -72,8 +72,8 @@ export function FinalCtaSection() {
               Make Work Run Itself.
             </motion.h2>
 
-            <motion.div className="mt-8 sm:mt-9" variants={contentVariants}>
-              <Pressable3dCta className="min-h-9 rounded-lg px-4 text-xs shadow-[0_4px_0_0_#c42e00] sm:min-h-10 sm:px-5 sm:text-sm">
+            <motion.div className="mt-7 sm:mt-9" variants={contentVariants}>
+              <Pressable3dCta className="min-h-9 rounded-lg px-4 text-xs whitespace-nowrap shadow-[0_4px_0_0_#c42e00] sm:min-h-10 sm:px-5 sm:text-sm">
                 Join the Camp <span aria-hidden>🏕️</span>
               </Pressable3dCta>
             </motion.div>
