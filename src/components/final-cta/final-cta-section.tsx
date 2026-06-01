@@ -73,9 +73,7 @@ export function FinalCtaSection() {
             </motion.h2>
 
             <motion.div className="mt-7 sm:mt-9" variants={contentVariants}>
-              <Pressable3dCta className="min-h-9 rounded-lg px-4 text-xs whitespace-nowrap shadow-[0_4px_0_0_#c42e00] sm:min-h-10 sm:px-5 sm:text-sm">
-                Join the Camp <span aria-hidden>🏕️</span>
-              </Pressable3dCta>
+              <Pressable3dCta />
             </motion.div>
           </div>
         </motion.div>
