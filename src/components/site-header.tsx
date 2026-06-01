@@ -4,7 +4,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { SiteContainer } from "@/components/layout/site-container";
-import { PRESSABLE_3D_CTA_CLASS } from "@/components/ui/pressable-3d-cta";
+import {
+  PRESSABLE_3D_CTA_CLASS,
+  PRESSABLE_3D_CTA_SIZE_CLASS,
+} from "@/components/ui/pressable-3d-cta";
 import { PrimaryCtaArrow } from "@/components/ui/primary-cta-arrow";
 import { cn } from "@/lib/utils";
 import { mapScroll } from "@/lib/scroll-ease";
@@ -12,8 +15,8 @@ import { mapScroll } from "@/lib/scroll-ease";
 const SCROLL_RANGE = 560;
 const HEADER_RADIUS_START = 20;
 const HEADER_RADIUS_END = 32;
-const BTN_RADIUS_START = 12;
-const BTN_RADIUS_END = 22;
+const BTN_RADIUS_START = 9;
+const BTN_RADIUS_END = 18;
 
 export function SiteHeader() {
   const { scrollY } = useScroll();
@@ -32,7 +35,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 bg-transparent pt-3 md:pt-4">
       <SiteContainer>
         <motion.div
-          className="flex items-center justify-between gap-4 bg-[#111111] px-4 py-3 md:px-5 md:py-3.5"
+          className="flex items-center justify-between gap-2 bg-[#111111] px-3 py-2.5 sm:gap-4 sm:px-4 sm:py-3 md:px-5 md:py-3.5"
           style={{
             borderRadius: headerBorderRadius,
             willChange: "border-radius",
@@ -42,9 +45,9 @@ export function SiteHeader() {
             <Image
               src="/logo.svg"
               alt="Delta"
-              width={125}
-              height={28}
-              className="shrink-0"
+              width={150}
+              height={34}
+              className="h-auto w-[132px] shrink-0 sm:w-[145px] md:w-[150px]"
               priority
               draggable={false}
             />
@@ -54,7 +57,8 @@ export function SiteHeader() {
             href="/join-the-bootcamp"
             className={cn(
               PRESSABLE_3D_CTA_CLASS,
-              "min-h-[44px] shrink-0 px-4 py-2.5 text-sm sm:min-h-[46px] md:px-5 md:text-[15px]",
+              PRESSABLE_3D_CTA_SIZE_CLASS,
+              "shrink-0",
             )}
             style={{
               borderRadius: buttonBorderRadius,

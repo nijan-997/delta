@@ -15,6 +15,7 @@ import { SiteContainer } from "@/components/layout/site-container";
 import { PrimaryCtaArrow } from "@/components/ui/primary-cta-arrow";
 import {
   PRESSABLE_3D_CTA_CLASS,
+  PRESSABLE_3D_CTA_SIZE_CLASS,
 } from "@/components/ui/pressable-3d-cta";
 import { cn } from "@/lib/utils";
 import {
@@ -283,7 +284,8 @@ export function BootcampForm() {
                   disabled={isSubmitting}
                   className={cn(
                     PRESSABLE_3D_CTA_CLASS,
-                    "min-h-[3.25rem] w-full justify-center py-4 sm:min-h-[3.375rem] sm:py-[1.0625rem]",
+                    PRESSABLE_3D_CTA_SIZE_CLASS,
+                    "w-full justify-center",
                     isSubmitting && "pointer-events-none opacity-70",
                   )}
                 >
