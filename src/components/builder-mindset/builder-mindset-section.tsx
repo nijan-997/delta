@@ -52,6 +52,7 @@ export function BuilderMindsetSection() {
               key={part.title}
               part={part}
               reverse={index % 2 === 1}
+              eager={index === 0}
             />
           ))}
         </div>

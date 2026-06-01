@@ -337,7 +337,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className={cn(
-          "mt-2 w-full rounded-xl border border-transparent bg-[#F5F1E6] px-4 py-3.5 text-base text-foreground placeholder:text-muted-foreground/70 outline-none transition-shadow focus-visible:ring-2 focus-visible:ring-[#FF774F]",
+          "mt-2 w-full rounded-xl border border-transparent bg-[#F0ECE7] px-4 py-3.5 text-base text-foreground placeholder:text-muted-foreground/70 outline-none transition-shadow focus-visible:ring-2 focus-visible:ring-[#FF774F]",
           error && "ring-2 ring-primary",
         )}
       />

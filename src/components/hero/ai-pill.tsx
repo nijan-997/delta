@@ -12,8 +12,8 @@ export function AiPill() {
       initial={{ rotate: 0, opacity: 0, y: 6 }}
       animate={{ rotate: -3, opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: easeOutSmooth, delay: 0.12 }}
-      whileHover={{ scale: 1.05, rotate: -3 }}
-      className="relative mx-1 inline-flex align-middle"
+      whileHover={{ scale: 1.12, rotate: -3 }}
+      className="relative mx-1 inline-flex cursor-pointer align-middle"
     >
       <span
         className="relative inline-flex rounded-full bg-[#CCE576]"
