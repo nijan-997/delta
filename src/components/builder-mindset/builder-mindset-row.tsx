@@ -36,9 +36,14 @@ const textVariants = {
 type BuilderMindsetRowProps = {
   part: BuilderMindsetPart;
   reverse?: boolean;
+  eager?: boolean;
 };
 
-export function BuilderMindsetRow({ part, reverse = false }: BuilderMindsetRowProps) {
+export function BuilderMindsetRow({
+  part,
+  reverse = false,
+  eager = false,
+}: BuilderMindsetRowProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { hasTriggered } = useCenterInViewOnce(ref);
 
@@ -62,6 +67,8 @@ export function BuilderMindsetRow({ part, reverse = false }: BuilderMindsetRowPr
           src={part.image}
           alt=""
           fill
+          loading={eager ? "eager" : "lazy"}
+          unoptimized
           className="object-contain p-6 sm:p-8 md:p-10"
           sizes="(max-width: 1024px) 100vw, 50vw"
           draggable={false}

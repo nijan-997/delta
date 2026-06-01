@@ -18,7 +18,7 @@ export function ChoiceCard({ choice, selected, onSelect }: ChoiceCardProps) {
       onClick={onSelect}
       aria-pressed={selected}
       className={cn(
-        "group relative flex h-full min-h-[200px] flex-col overflow-hidden rounded-2xl bg-[#F0ECE7] p-4 text-left transition-[transform,box-shadow,border-color] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF774F] focus-visible:ring-offset-2 sm:min-h-[220px] sm:rounded-[20px] sm:p-5",
+        "group relative flex h-full min-h-[200px] cursor-pointer flex-col overflow-hidden rounded-2xl bg-[#F0ECE7] p-4 text-left transition-[transform,box-shadow,border-color] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF774F] focus-visible:ring-offset-2 sm:min-h-[220px] sm:rounded-[20px] sm:p-5",
         selected
           ? "border-2 border-primary shadow-sm ring-1 ring-primary/20"
           : "border-2 border-transparent hover:scale-[1.02] hover:shadow-md active:scale-[0.99]",

@@ -1,4 +1,5 @@
 import { BuilderMindsetSection } from "@/components/builder-mindset/builder-mindset-section";
+import { FinalCtaSection } from "@/components/final-cta/final-cta-section";
 import { HeroSection } from "@/components/hero/hero-section";
 import { IcpSection } from "@/components/icp/icp-section";
 
@@ -10,6 +11,7 @@ export default function Home() {
       </section>
       <BuilderMindsetSection />
       <IcpSection />
+      <FinalCtaSection />
     </main>
   );
 }
